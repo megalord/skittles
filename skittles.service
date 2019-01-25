@@ -1,0 +1,13 @@
+[Unit]
+Description=Skittles Slack Bot
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/home/jordan/skittles/env
+WorkingDirectory=/home/jordan/skittles
+ExecStart=/usr/bin/python3 main.py
+Restart=always
+
+[Install]
+WantedBy=default.target
